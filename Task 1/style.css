@@ -65,11 +65,11 @@ form {
 }
 
 .message {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .output-heading {
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   color: #333;
 }
 
@@ -77,19 +77,14 @@ form {
   color: #000;
 }
 
-.result {
-  display: flex;
-  align-items: center;
-  font-size: 1.7rem;
-}
 .subtitle {
   color: #333;
-  font-size: 2.2rem;
+  font-size: 1.3rem;
 }
 
 .value {
   font-weight: 700;
-  font-size: 2.3rem;
+  font-size: 1.3rem;
   color: #000;
 }
 
@@ -97,6 +92,21 @@ form {
 @media screen and (min-width: 768px) {
   .headline {
     font-size: 3.5em;
+  }
+
+  .output-heading {
+    font-size: 2.5rem;
+    color: #333;
+  }
+
+  .subtitle {
+    font-size: 2.2rem;
+  }
+  .value {
+    font-size: 2.3rem;
+  }
+  .message {
+    font-size: 1.3rem;
   }
 
   #search,
