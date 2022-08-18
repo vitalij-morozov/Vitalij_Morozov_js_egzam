@@ -15,6 +15,8 @@ const outputContainerEl = document.getElementById("output");
 // Pagrindine nuoroda
 const ENDPOINT = "cars.json";
 
+let carsArray = [];
+
 // GET Cars is lokalinio cars.json failo
 async function getCars(url) {
   try {
@@ -23,6 +25,7 @@ async function getCars(url) {
       throw new Error("Fetch GET failed", response.status, response.message);
     }
     const dataInJs = await response.json();
+    carsArray = dataInJs;
     console.log("GET dataInJs ===", dataInJs);
     return dataInJs;
   } catch (error) {
@@ -31,7 +34,9 @@ async function getCars(url) {
 }
 
 // Gaunam Cars sarasa is cars.json ir atvaizduojame HTML uzkrovus puslapi
-getCars(ENDPOINT).then(displayCarCards);
+getCars(ENDPOINT)
+  .then(displayCarCards)
+  .catch((error) => console.warn(error));
 
 // Sukurti Car korteles HTML elementus
 function createCarCard(cObj) {

@@ -9,7 +9,7 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
 
-// Nusitaikimai
+// Nusitaikymai
 const formEl = document.querySelector("form");
 const outputContainerEl = document.getElementById("output");
 
@@ -23,7 +23,7 @@ function formHandler(event) {
   // Ivesta reiksme (kg)
   const eneteredValue = +formEl.elements.search.value;
 
-  // Formos validacija
+  // Formos validacija - turi buti skaicius didesnis uz 0
   if (isNaN(eneteredValue)) {
     formEl.reset();
     return alert("You must enter a number");
@@ -45,6 +45,6 @@ function formHandler(event) {
    <h3 class="subtitle">Weight In Oz: <span class="value">${valueInOz}oz</span></h3>
   `;
 
+  console.log("eneteredValue ===", eneteredValue);
   formEl.reset();
-  console.log("eneteredValue ===", isNaN(eneteredValue));
 }

@@ -63,7 +63,7 @@ body {
 /* Tablet + */
 
 /* Big Tablet */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 650px) {
   .container {
     padding: 20px 40px;
   }
@@ -81,7 +81,13 @@ body {
 }
 
 /* High Resolution */
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
+  #output {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1250px) {
   #output {
     grid-template-columns: repeat(5, 1fr);
   }
