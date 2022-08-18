@@ -3,8 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -55,7 +54,55 @@
 .output-cointainer #output {
   width: 80%;
   margin-top: 25px;
-  padding: 30px;
+  padding: 15px;
   border-radius: 5px;
   background-color: #fff;
+  display: grid;
+  gap: 15px;
+}
+
+/* User Card */
+.user-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 15px;
+  background-color: #474747;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px 4px rgba(0, 0, 0, 0.3);
+  /* margin: 0 10px; */
+}
+
+.user-card__avatar {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  border: 10px solid #222;
+}
+
+/* Tablet + */
+@media screen and (min-width: 599px) {
+  .output-cointainer #output {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+/* Big Tablet */
+@media screen and (min-width: 1020px) {
+  .output-cointainer #output {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* High Resolution */
+@media screen and (min-width: 1200px) {
+  .output-cointainer #output {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
