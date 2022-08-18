@@ -36,10 +36,10 @@ body {
 
 /* Car Card */
 .car-card {
-  margin: 0 25px;
+  margin: 10px 25px;
   padding: 10px;
   text-align: center;
-  background-color: rgb(186, 215, 224);
+  background-color: rgb(219, 232, 236);
   height: 350px;
   overflow-y: scroll;
   border-radius: 5px;
@@ -71,6 +71,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .car-card {
+    margin: 10px;
   }
   .car-card__model-list {
     font-size: 1.3rem;
