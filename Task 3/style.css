@@ -54,7 +54,7 @@
 .output-cointainer #output {
   width: 80%;
   margin-top: 25px;
-  padding: 30px;
+  padding: 15px;
   border-radius: 5px;
   background-color: #fff;
   display: grid;
@@ -84,9 +84,25 @@
 }
 
 /* Tablet + */
-@media screen and (min-width: 750px) {
-  #output {
+@media screen and (min-width: 599px) {
+  .output-cointainer #output {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+/* Big Tablet */
+@media screen and (min-width: 1020px) {
+  .output-cointainer #output {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* High Resolution */
+@media screen and (min-width: 1200px) {
+  .output-cointainer #output {
     grid-template-columns: repeat(5, 1fr);
   }
 }
